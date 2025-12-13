@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>mlb-project.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="finalstyles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="top">
+  <div class="bar black card">
+    <a class="bar-item button padding-large hide-medium hide-large right"></a>
+    <a href="#" class="bar-item button padding-large">HOME</a>
+    <a href="#mlb" class="bar-item button padding-large hide-small">MLB</a>
+    <a href="#games" class="bar-item button padding-large hide-small">UPCOMING GAMES</a>
+    <a href="#news" class="bar-item button padding-large hide-small">NEWS</a>
+    <a href="#highlights" class="bar-item button padding-large hide-small">HIGHLIGHTS</a>
+    <a href="#contact" class="bar-item button padding-large hide-small">CONTACT</a>
+    <a href="https://www.youtube.com/channel/UCoLrcjPV5PbUrUyXq5mjc_A"> <i class="fa fa-youtube"> </i> </a>
+    <a href="https://www.facebook.com/mlb"> <i class="fa fa-facebook"> </i> </a>
+    <a href="https://www.twitter.com/MLB"> <i class="fa fa-twitter"> </i> </a>
+    <a href="https://www.instagram.com/mlb"> <i class="fa fa-instagram"> </i> </a>
+  </div>
+</div>
+
+<div class="content" style="max-width:2000px;margin-top:46px">
+
+  <div class="mySlides display-container center">
+    <img src="base.jpg" style="width:100%">
+  </div>
+  <div class="mySlides display-container center">
+    <img src="base2.jpg" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h3>Atlanta</h3>
+      <p><b>A Braves - Tigers game played in Truist Park</b></p>    
+    </div>
+  </div>
+  <div class="mySlides display-container center">
+    <img src="cheerleaders.jpg" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h3>MLB cheerleaders</h3>
+      <p><b>MLB Cheerleaders celebrating a Homerun</b></p>    
+    </div>
+  </div>
+  <div class="mySlides display-container center">
+    <img src="base3.jpg" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h3>Colorado</h3>
+      <p><b>The colorado Rockies player before hitting a homerun</b></p>    
+    </div>
+  </div>
+  <div class="mySlides display-container center">
+    <img src="base4.jpg" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h3>Chicago</h3>
+      <p><b>The great Wrigley Field : Home of the Chicago Cubs</b></p>    
+    </div>
+  </div>
+
+  <div class="container content center padding-64" style="max-width:800px" id="mlb">
+    <h2 class="wide">Major League Baseball</h2>
+    <p class="opacity"><i>America's pastime</i></p>
+    <p class="justify">Major League Baseball (MLB) is a professional baseball organization and the oldest major professional sports league
+    in the world. Under the direction of the Commissioner of Baseball, MLB hires and maintains the sport's umpiring crews, and negotiates marketing,
+    labor, and television contracts. MLB maintains a unique, controlling relationship over the sport, including most aspects of Minor League Baseball.</p>
+    <div class="row padding-32">
+      <div class="third">
+        <p>MLB's current commissioner</p>
+        <a href="rob.webp"> <img src="rob.webp" class="round margin-bottom" alt="error" style="width:60%"> </a>
+      </div>
+      <div class="third">
+        <p>An MLB umpire</p>
+        <a href="ump.jpg"> <img src="ump.jpg" class="round margin-bottom" alt="error" style="width:60%"> </a>
+      </div>
+      <div class="third">
+        <p>The Minor League Baseball logo</p>
+        <a href="milb.jpg"> <img src="milb.jpg" class="round" alt="error" style="width:60%"> </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="black" id="games">
+    <div class="container content padding-64" style="max-width:800px">
+      <h2 class="wide center">Upcoming games</h2>
+      <p class="opacity center"><i>Remember to book your tickets!</i></p><br>
+      <div class="row-padding padding-32" style="margin:0 -16px">
+        <div class="third margin-bottom">
+          <img src="cubsvscards.png" alt="cubsvscards" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>In Chicago</b></p>
+            <p class="opacity">Fri 27 April 2023</p>
+            <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="third margin-bottom">
+          <img src="astrosvsdodg.png" alt="astrosvsdodg" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>In Houston</b></p>
+            <p class="opacity">Sat 28 April 2023</p>
+            <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="third margin-bottom">
+          <img src="giantsvsyanks.png" alt="giantsvsyanks" style="width:100%" class="hover-opacity">
+          <div class="container white">
+            <p><b>In San Francisco</b></p>
+            <p class="opacity">Sun 29 April 2023</p>
+            <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ticketModal" class="modal">
+    <div class="modal-content animate-top card-4">
+      <header class="container mlbblue center padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="button mlbblue xlarge display-topright">x</span>
+        <h2 class="wide">Tickets</h2>
+      </header>
+      <div class="container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="input border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="input border" type="text" placeholder="Enter email">
+        <button class="button block mlbblue padding-16 section right">PAY</button>
+        <button class="button red section" onclick="document.getElementById('ticketModal').style.display='none'">Close</button>
+      </div>
+    </div>
+  </div>
+
+<div class="container content center padding-64" style="max-width:5000px" id="news">
+  <h2 class="wide">News</h2>
+  <div class="row padding-32">
+    <div class="third">
+      <img src="ohtani.jpg" class="round margin-bottom" alt="ohtani" style="width:90%">
+      <center> <h3> <b> Japan's Shohei Ohtani named as the best player in the league. </b> </h3> </center>
+      <button class="button black margin-bottom" onclick="document.getElementById('1stnewsModal').style.display='block'">Read more</button>
+    </div>
+    <div class="third">
+      <img src="judge.jpg" class="round margin-bottom" alt="judge" style="width:90%">
+      <center> <h3> <b> Can Aaron Judge repeat another season as the homerun king? </b> </h3> </center>
+      <button class="button black margin-bottom" onclick="document.getElementById('2ndnewsModal').style.display='block'">Read more</button>
+    </div>
+    <div class="third">
+      <img src="champs.webp" class="round" alt="champs" style="width:88%"> <br> <br>
+      <center> <h3> <b> The Astros make major moves to try and repeat their championship run. </b> </h3> </center>
+      <button class="button black margin-bottom" onclick="document.getElementById('3rdnewsModal').style.display='block'">Read more</button>
+    </div>
+   </div>
+</div>
+
+<div id="1stnewsModal" class="modal">
+  <div class="modal-content animate-top card-4">
+    <header class="container mlbblue center padding-32"> 
+      <span onclick="document.getElementById('1stnewsModal').style.display='none'" 
+     class="button mlbblue xlarge display-topright">x</span>
+    </header>
+    <div class="container">
+      <br> <b>It's hard to argue with the top ranking going to a guy who, for the past two seasons, has basically been the equivalent of Freddie
+       Freeman at the plate and Carlos Rodón on the mound. It's no wonder Ohtani is the No. 1 player in baseball for the second consecutive year.
+       Here's the top 15 players in the league as voted by the fans : </b> <br> <br>
+       #15 Max Scherzer <br>
+       #14 Justin Verlander <br>
+       #13 Sandy Alcantara <br> 
+       #12 Juan Soto <br> 
+       #11 Trea Turner <br> 
+       #10 Freddie Freeman <br> 
+       #9 Yordan Alvarez <br> 
+       #8 José Ramírez <br> 
+       #7 Paul Goldschmidt <br> 
+       #6 Nolan Arenado <br> 
+       #5 Manny Machado <br> 
+       #4 Mookie Betts <br> 
+       #3 Mike Trout <br>
+       #2 Aaron Judge <br> 
+       #1 Shohei Ohtani
+    </div>
+  </div>
+</div>
+
+<div id="2ndnewsModal" class="modal">
+  <div class="modal-content animate-top card-4">
+    <header class="container mlbblue center padding-32"> 
+      <span onclick="document.getElementById('2ndnewsModal').style.display='none'" 
+     class="button mlbblue xlarge display-topright">x</span>
+    </header>
+    <div class="container">
+      <br> Before the 2022 New York Yankees season, Judge was unsuccessful in negotiating a long-term contract with the Yankees. General manager
+      Brian Cashman told ESPN that the team offered Judge $17 million in arbitration and a seven-year extension worth $213.5 million. 
+      Cashman refused to comment on whether this affected the negotiations. <br> <br> Judge avoided salary arbitration and signed a one-year, 
+      $19 million contract on June 24. In 2022, Judge led the major leagues with 62 home runs, 133 runs scored, 131 RBIs, and 111 walks, 
+      and batted .311/.425/.686 with 177 hits, 28 doubles, and 19 intentional walks, while stealing 16 bases in 19 attempts. <br> <br> He played 78
+      games in center field, 73 games in right field, and 25 games as a designated hitter. <br> <br> For his play in the 2022 regular season, Judge 
+      won the 2022 American League MVP Award, earning 28 of 30 first-place votes. <br> <br> Judge's 2022 campaign is considered one of the best offensive 
+      seasons in Major League history. <br> <br>
+      <p style="font-size:15pt;"> <b> The general opinion around the league is that Judge is too good of a player for him to not be able to
+      have another fantastic season, but the number of homeruns he'll hit next season is likely to be significantly less than last year's. </b></p>
+    </div>
+  </div>
+</div>
+
+<div id="3rdnewsModal" class="modal">
+  <div class="modal-content animate-top card-4">
+    <header class="container mlbblue center padding-32"> 
+      <span onclick="document.getElementById('3rdnewsModal').style.display='none'" 
+     class="button mlbblue xlarge display-topright">x</span>
+    </header>
+    <div class="container">
+      The 2022 season opened without Carlos Correa at shortstop for the first time since 2016 as he left for the Minnesota Twins in free agency. 
+      Rookie shortstop Jeremy Peña made the Opening Day start and manned the position for the entire season. <br> <br> The Astros clinched the division on 
+      September 19, their second consecutive division title and their fifth in six seasons. The Astros went on to defeat the Phillies in six 
+      games, earning their second World Series title. <br> Jeremy Peña won the Series MVP Award, the first rookie position player in MLB history 
+      to do so, and the first rookie shortstop in history to hit a home run in the World Series. <br> <br> <b> The Astros are hoping to recreate their
+      magical 2022 season, and in order to do that, several moves were made : </b> <br> <br> SP Christian Javier agreed to a five-year contract
+      extension. <br> <br> 1B Jose Abreu signed a three-year contract deal. <br> <br> OF Michael Brantley agreed to a one-year contract. <br> <br>
+      SP Justin Verlander was lost in free agency to the New York Mets. <br> <br> <b>Experts graded Houston's offseason a B-, will it be enough 
+      to maintain the title?</b>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container content center padding-64" style="max-width:5000px" id="highlights">
+  <h2 class="wide">Highlights</h2>
+  <div class="row padding-32">
+    <div class="third">
+      <div class="round margin-bottom"> <iframe width="400" height="300" src="https://www.youtube.com/embed/nxuTG5SEHn8">
+      </iframe> </div>
+    </div>
+    <div class="third">
+      <div class="round margin-bottom"> <iframe width="400" height="300" src="https://www.youtube.com/embed/DltB8WKNbsw">
+      </iframe> </div>
+    </div>
+    <div class="third">
+      <div class="round margin-bottom"> <iframe width="400" height="300" src="https://www.youtube.com/embed/ggHg5GDAcBc">
+      </iframe> </div>
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <hr>
+
+  <div class="container content padding-64" style="max-width:800px" id="contact">
+    <h2 class="wide center">CONTACT</h2>
+    <p class="opacity center"><i>Baseball is for the fans, have a suggestion? Drop it below!</i></p>
+    <div class="row padding-32">
+      <div class="col m6 margin-bottom">
+        MLB Headquarters: New York, United States<br>
+        Customer Support number: 866-244-2291<br>
+        International callers: 315-203-6761<br>
+        Email: mlbcustomerservice@mlb.com<br>
+      </div>
+      <div class="col m6">
+        <form>
+          <div class="row-padding" style="margin:0 -16px 8px -16px">
+            <div class="half">
+              <input class="input border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="half">
+              <input class="input border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="input border" type="text" placeholder="Message" required name="Message">
+          <button class="button black section right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<footer class="container padding-64 center opacity light-grey xlarge">
+<p class="medium">Powered by MLB &copy;</p>
+</footer>
+
+<script>
+  // Javascript code
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+</script>
+
+</body>
+</html>
