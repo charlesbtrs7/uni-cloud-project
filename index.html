@@ -253,18 +253,24 @@
         Email: mlbcustomerservice@mlb.com<br>
       </div>
       <div class="col m6">
-        <form>
-          <div class="row-padding" style="margin:0 -16px 8px -16px">
-            <div class="half">
-              <input class="input border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="half">
-              <input class="input border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="input border" type="text" placeholder="Message" required name="Message">
-          <button class="button black section right" type="submit">SEND</button>
-        </form>
+        
+        <form id="contactForm">
+  <div class="row-padding" style="margin:0 -16px 8px -16px">
+    <div class="half">
+      <input class="input border" type="text" placeholder="Name" required id="cName" name="Name">
+    </div>
+    <div class="half">
+      <input class="input border" type="text" placeholder="Email" required id="cEmail" name="Email">
+    </div>
+  </div>
+
+  <input class="input border" type="text" placeholder="Message" required id="cMessage" name="Message">
+
+  <button class="button black section right" type="submit">SEND</button>
+
+  <p id="contactStatus" style="margin-top:10px;"></p>
+</form>
+        
       </div>
     </div>
   </div>
@@ -294,6 +300,46 @@ function carousel() {
 }
 </script>
 
+  <script>
+  // === CONTACT FORM -> LAMBDA API ===
+  const LAMBDA_URL = "https://tvc6yhhzcb4taas67lzbfdyxhi0jslmy.lambda-url.eu-north-1.on.aws"; // must end with .on.aws (no extra spaces)
+
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("contactStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    statusEl.textContent = "Sending...";
+
+    const payload = {
+      name: document.getElementById("cName").value.trim(),
+      email: document.getElementById("cEmail").value.trim(),
+      message: document.getElementById("cMessage").value.trim()
+    };
+
+    try {
+      const res = await fetch(LAMBDA_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.ok) {
+        statusEl.textContent = data.message || "Message received ✅";
+        form.reset();
+      } else {
+        statusEl.textContent = (data && data.error) ? ("Error: " + data.error) : "Error sending message";
+      }
+    } catch (err) {
+      statusEl.textContent = "Network error. Try again.";
+    }
+  });
+</script>
+  
 </body>
 
 </html>
+
