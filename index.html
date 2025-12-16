@@ -321,7 +321,10 @@ function carousel() {
     try {
       const res = await fetch(LAMBDA_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+  "Content-Type": "application/json",
+  "X-API-Secret": "mlb_super_secret_9284xKqP"
+},
         body: JSON.stringify(payload)
       });
 
@@ -342,6 +345,7 @@ function carousel() {
 </body>
 
 </html>
+
 
 
 
